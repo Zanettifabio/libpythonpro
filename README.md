@@ -25,3 +25,7 @@ edição na branch_teste
 nova linha inserida, agora com mais conteúdo conforme solicitado - issue #11
 
 skjdhfsioudgfiu
+
+Texto1
+texto2
+texto3
