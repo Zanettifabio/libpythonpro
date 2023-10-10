@@ -41,3 +41,5 @@ textoC
 textoD
 textoE
 textoF
+
+novo texto
