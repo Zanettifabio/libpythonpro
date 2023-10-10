@@ -10,3 +10,5 @@ Adição feita no repositório remoto
 Adição 2 feita no repositório remoto
 
 Terceira adição
+
+Mais uma adição feita remotamente
