@@ -19,3 +19,5 @@ Outra adição remota
 
 Adicionando nova linha de texto conforme issue #9
 testando fetch
+
+edição na branch_teste
