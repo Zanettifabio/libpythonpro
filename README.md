@@ -38,3 +38,6 @@ texto3
 textoA
 textoB
 textoC
+textoD
+textoE
+textoF
