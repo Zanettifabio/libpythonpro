@@ -16,3 +16,5 @@ Esta adição foi feita localmente - alterada para linha 18
 Mais uma adição feita remotamente
 
 Outra adição remota
+
+Adicionando nova linha de texto conforme issue #9
