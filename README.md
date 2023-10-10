@@ -18,3 +18,4 @@ Mais uma adição feita remotamente
 Outra adição remota
 
 Adicionando nova linha de texto conforme issue #9
+testando fetch
