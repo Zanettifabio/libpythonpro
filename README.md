@@ -11,4 +11,8 @@ Adição 2 feita no repositório remoto
 
 Terceira adição
 
-Esta adição foi feita localmente
+
+
+
+
+Esta adição foi feita localmente - alterada para linha 18
