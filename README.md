@@ -24,3 +24,5 @@ Tópicos a serem abordados:
 1. Git
 2. Virtualenv
 3. Pip
+
+testanto travis agora com versão python 3.9 informada
