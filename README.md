@@ -5,6 +5,8 @@ Nesse curso é ensinado como contribuir com projetos de código aberto
 
 Link para o site: [Python Pro](https://www.dev.pro.br/)
 
+[![Build Status](https://app.travis-ci.com/Zanettifabio/libpythonpro.svg?branch=main)](https://app.travis-ci.com/Zanettifabio/libpythonpro)
+
 Para instalar:
 
 '''console
