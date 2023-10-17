@@ -19,3 +19,5 @@ jobs:
         uses: py-actions/flake8@v2
         with:
           checkName: 'flake8'
+#          max-line-length: 120
+#          exclude: .venv
