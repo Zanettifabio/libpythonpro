@@ -18,6 +18,6 @@ jobs:
       - name: Rodar flake8
         uses: py-actions/flake8@v2
         with:
-          checkName: 'flake8'
-#          max-line-length: 120
-#          exclude: .venv
+#          checkName: 'flake8'
+          max-line-length: 120
+          exclude: .venv
