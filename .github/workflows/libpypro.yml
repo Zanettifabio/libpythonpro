@@ -1,23 +1,38 @@
 name: libpythonpro_fabio
 
+# Momento em que o workflow será executado. Neste caso, a cada 'push' que for feito no repositório. Podem ser
+# incluídos filtros e mais definições para que seja executado em ocasiões e branches mais específicas, por exemplo;
 on: push
 
+# O GitHub cria uma espécie de 'máquina virtual' para executar os comandos que definimos aqui, e devemos especificar
+# o sistema operacional que queremos nessa 'máquina' e também versão do python que queremos testar;
+
 jobs:
-  first_job:
-    runs-on: ubuntu-latest
+  first_job: # ID do job que aparecerá no GitHub;
+    runs-on: ubuntu-latest # Sistema operacional que será usado na 'máquina virtual' criada pelo GitHub;
 
     steps:
+#       usamos essa action para que o GitHub clone nosso repositório na máquina virtual e acesse através do checkout;
       - uses: actions/checkout@v2
+
+#       agora usamos essa próxima action para definir qual versão do python será utilizada na máquina virtual.
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
           architecture: x64
+
+#       após etapas acima é hora de definir quais testes queremos executar após cada push feito em nosso repositório;
       - name: Instalar dependências
         run: pip install -r requirements-dev.txt
+
+#        para rodar o flake8 temos a opção de apenas rodar ou usar o 'py-actions/flake8@v2'. A diferença é que o
+#        py-actions instala e já executa, enquanto apenas rodar vai usar o flake8 já instalado via requirements-dev.txt.
+#        Como já o instalamos via requirements-dev.txt optei por apenas rodar;
       - name: Rodar flake8
-        uses: py-actions/flake8@v2
-        with:
-#          checkName: 'flake8'
-          max-line-length: 120
-          exclude: .venv
+        run: flake8
+#        uses: py-actions/flake8@v2
+#        with:
+#          max-line-length: 120
+#          exclude: .venv
+
