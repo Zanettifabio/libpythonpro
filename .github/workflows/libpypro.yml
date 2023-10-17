@@ -1,0 +1,21 @@
+name: libpythonpro_fabio
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          architecture: x64
+      - name: Instalar dependências
+        run: pip install -r requirements-dev.txt
+      - name: Rodar flake8
+        uses: py-actions/flake8@v2
+        with:
+          checkName: 'flake8'
