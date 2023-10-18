@@ -37,6 +37,7 @@ jobs:
 #          exclude: .venv
 
       - name: Checar versões dependências
-        uses: pypa/gh-action-pip-audit@v1.0.0
-        with:
-          inputs: requirements-dev.txt
+        run: pip-audit
+#        uses: pypa/gh-action-pip-audit@v1.0.0
+#        with:
+#          inputs: requirements-dev.txt
