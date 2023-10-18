@@ -13,7 +13,7 @@ jobs:
 
     steps:
 #       usamos essa action para que o GitHub clone nosso repositório na máquina virtual e acesse através do checkout;
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
 #       agora usamos essa próxima action para definir qual versão do python será utilizada na máquina virtual.
       - name: Setup Python
