@@ -5,17 +5,19 @@ Nesse curso é ensinado como contribuir com projetos de código aberto
 
 Link para o site: [Python Pro](https://www.dev.pro.br/)
 
+[![codecov](https://codecov.io/gh/Zanettifabio/libpythonpro/graph/badge.svg?token=O6BFKFVJXH)](https://codecov.io/gh/Zanettifabio/libpythonpro)
+
 Para instalar:
 
-'''console
-python3 -m venv .venv
-source .venv/bin/activate
+'''console<br />
+python3 -m venv .venv<br />
+source .venv/bin/activate<br />
 pip install -r requirements-dev.txt
 '''
 
 Para conferir qualidade do código:
 
-'''console
+'''console<br />
 flake8'''
 
 Tópicos a serem abordados:
