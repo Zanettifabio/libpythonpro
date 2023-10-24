@@ -40,3 +40,6 @@ jobs:
         uses: pypa/gh-action-pip-audit@v1.0.0
         with:
           inputs: requirements-dev.txt
+
+      - name: Testes automáticos
+        run: pytest libpythonpro
