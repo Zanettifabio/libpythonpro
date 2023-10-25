@@ -28,7 +28,7 @@ def test_salvar_usuario(sessao):
     assert isinstance(usuario.id, int)
 
 
-def test_listar_usuario(conexao, sessao):
+def test_listar_usuario(sessao):
     usuarios = [Usuario(nome='Fabio'), Usuario(nome='Fernanda')]
     for usuario in usuarios:
         sessao.salvar(usuario)
