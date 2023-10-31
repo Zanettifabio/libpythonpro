@@ -23,26 +23,31 @@ jobs:
           architecture: x64
 
 #       após etapas acima é hora de definir quais testes queremos executar após cada push feito em nosso repositório;
+      - name: Instalar pipenv
+        run: pip install pipenv
+
       - name: Instalar dependências
-        run: pip install -r requirements-dev.txt
+        run: pipenv sync --dev
 
 #        para rodar o flake8 temos a opção de apenas rodar ou usar o 'py-actions/flake8@v2'. A diferença é que o
 #        py-actions instala e já executa, enquanto apenas rodar vai usar o flake8 já instalado via requirements-dev.txt.
 #        Como já o instalamos via requirements-dev.txt optei por apenas rodar;
       - name: Rodar flake8
-        run: flake8
+        run: pipenv run flake8
 #        uses: py-actions/flake8@v2
 #        with:
 #          max-line-length: 120
 #          exclude: .venv
 
-      - name: Checar versões dependências
-        uses: pypa/gh-action-pip-audit@v1.0.0
+      - name: 'Generate requirements.txt' # Este arquivo deve ser gerado para que o pip-audit possa checar as versões;
+        run: pipx run pipfile-requirements Pipfile.lock > requirements.txt
+
+      - uses: pypa/gh-action-pip-audit@v1.0.8 # Etapa de checagem de versões de dependências pelo pip-audit;
         with:
-          inputs: requirements-dev.txt
+          inputs: requirements.txt
 
       - name: Testes automáticos
-        run: pytest --cov=libpythonpro
+        run: pipenv run pytest --cov=libpythonpro
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
